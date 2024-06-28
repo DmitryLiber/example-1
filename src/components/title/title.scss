@@ -1,0 +1,41 @@
+@layer component {
+  .title {
+    @include font(22px, 1.5, 600);
+
+    margin: 0;
+
+    @include mq($ms) {
+      font-size: 30px;
+    }
+  }
+}
+
+@layer mod {
+  .title--xl {
+    @include font(30px, 1, 700);
+
+    @include mq($ms) {
+      font-size: 45px;
+    }
+  }
+
+  .title--caption {
+    margin-bottom: 20px;
+    text-align: center;
+
+    @include mq($ms) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .title--caption-medium {
+    @include font(20px, 1.61, 500);
+
+    margin-bottom: 9px;
+    text-align: center;
+
+    @include mq($ms) {
+      font-size: 28px;
+    }
+  }
+}

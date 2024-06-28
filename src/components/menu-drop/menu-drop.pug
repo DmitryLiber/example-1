@@ -1,0 +1,6 @@
+
+mixin menu-drop(mods)
+  - const allMods = mods && mods.split(',').map((mod) => `menu-drop--${mod.trim()}`).join(' ')
+  .menu-drop.js-menu-drop(class=allMods)&attributes(attributes)
+    +menu({}, 'vertical')
+    +btn.js-modal(aria-label="Открыть pop-up", aria-expanded="false", data-id="pop-up") Open pop-up button

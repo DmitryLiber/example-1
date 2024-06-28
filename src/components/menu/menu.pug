@@ -1,0 +1,8 @@
+
+mixin menu({count = 4} = {}, mods)
+  - const allMods = mods && mods.split(',').map((mod) => `menu--${mod.trim()}`).join(' ')
+  nav.menu(class=allMods)&attributes(attributes)
+    ul.menu__list
+      each val, i in Array(count)
+        li.menu__item
+          +link(href="javascript:void(0)", class=i===0 ? 'active' : '').menu__link Text

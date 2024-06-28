@@ -1,0 +1,9 @@
+
+mixin example-preview(mods)
+  - const allMods = mods && mods.split(',').map((mod) => `example-preview--${mod.trim()}`).join(' ')
+  +section.example-preview(class=allMods)&attributes(attributes)
+    +container
+      +title({}, 'caption') H2 text
+      .example-preview__items
+        each val, i in Array(5)
+          .example-preview__item(class=i === 0 ? 'active' : '')

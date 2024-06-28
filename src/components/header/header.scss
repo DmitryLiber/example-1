@@ -1,0 +1,23 @@
+@layer component {
+  .header {
+    background-color: cl(surface);
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      @include mq($ms) {
+        padding: 55px 55px 48px 155px;
+      }
+    }
+
+    .menu {
+      @include mq-max($ms) {
+        display: none;
+      }
+    }
+  }
+}

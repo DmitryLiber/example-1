@@ -1,0 +1,49 @@
+@layer component {
+  .slider-nav {
+    --arrow-height: 40px;
+    --arrow-width: 20px;
+
+    display: flex;
+    gap: 20px;
+    color: cl(primary);
+
+    @include mq($ms) {
+      --arrow-height: 77px;
+      --arrow-width: 40px;
+    }
+
+    &__btn-prev {
+      &::before {
+        @include variable-icon(
+          url('/img/i-arrow-left.svg'),
+          var(--arrow-width),
+          cl(whte),
+          var(--arrow-height)
+        );
+      }
+    }
+
+    &__btn-next {
+      &::before {
+        @include variable-icon(
+          url('/img/i-arrow-right.svg'),
+          var(--arrow-width),
+          cl(whte),
+          var(--arrow-height)
+        );
+      }
+    }
+  }
+}
+
+@layer mod {
+  .slider-nav--full {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 0;
+  }
+}

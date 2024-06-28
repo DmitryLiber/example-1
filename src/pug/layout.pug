@@ -1,0 +1,20 @@
+doctype
+include vars
+include mixins
+block vars
+
+html(lang='ru')
+  head
+    +head
+  body
+    +header
+    block content
+      +content-wrapper
+    +footer
+    template#pop-up
+      .modal(data-id="pop-up")
+        .modal__content
+          button.modal__close.close.js-close(type='button', aria-label='Закрыть') X
+          +title({tag:'h2'}, 'caption') Pop-up
+    block modals
+    block scripts

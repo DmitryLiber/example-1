@@ -1,0 +1,6 @@
+
+mixin slider-nav({} = {}, mods)
+  - const allMods = mods && mods.split(',').map((mod) => `slider-nav--${mod.trim()}`).join(' ')
+  .slider-nav(class=allMods)&attributes(attributes)
+    button(type='button').slider-nav__btn-prev.js-slider-prev
+    button(type='button').slider-nav__btn-next.js-slider-next

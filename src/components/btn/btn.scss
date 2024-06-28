@@ -1,0 +1,26 @@
+@layer component {
+  .btn {
+    @include font(18px, normal);
+
+    padding: 15px 28px;
+    color: cl(whte);
+    letter-spacing: -0.01em;
+    background-color: cl(primary);
+    border-radius: var(--radius-m);
+    transition: filter $time;
+
+    @include mq($ms) {
+      font-size: 24px;
+    }
+
+    @include mq-hover {
+      filter: brightness(1.1);
+    }
+  }
+}
+
+@layer mod {
+  .btn--alt {
+    box-shadow: 2px 5px 10px 0 cl(surface-forth);
+  }
+}

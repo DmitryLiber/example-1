@@ -1,0 +1,5 @@
+
+mixin menu-control(mods)
+  - const allMods = mods && mods.split(',').map((mod) => `menu-control--${mod.trim()}`).join(' ')
+  button(type="button", aria-label="Открыть меню", aria-haspopup="menu", aria-expanded="false", class=allMods).menu-control.js-menu-control&attributes(attributes)
+    span

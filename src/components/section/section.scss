@@ -1,0 +1,13 @@
+@layer component {
+  .section {
+    --space-bottom: 15px;
+    --space-bottom-neg: -15px;
+
+    margin-bottom: var(--space-bottom);
+
+    @include mq($ms) {
+      --space-bottom: 40px;
+      --space-bottom-neg: -40px;
+    }
+  }
+}

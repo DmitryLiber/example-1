@@ -1,0 +1,22 @@
+.footer {
+  background-color: cl(surface-alt);
+
+  .container {
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    @include mq($ms) {
+      --pad: 204px;
+    }
+  }
+
+  .menu {
+    &__list {
+      @include mq-max($ms) {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+      }
+    }
+  }
+}

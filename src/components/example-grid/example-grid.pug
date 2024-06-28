@@ -1,0 +1,9 @@
+
+mixin example-grid(mods)
+  - const allMods = mods && mods.split(',').map((mod) => `example-grid--${mod.trim()}`).join(' ')
+  +section.example-grid(class=allMods)&attributes(attributes)
+    +container
+      +title({}, 'caption') H2 text
+      ul.example-grid__items
+        each val in Array(4)
+          li.example-grid__item

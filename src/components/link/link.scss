@@ -1,0 +1,15 @@
+@layer component {
+  .link {
+    @include mq-hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@layer state {
+  .link {
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+
+mixin example-ytp(mods)
+  - const allMods = mods && mods.split(',').map((mod) => `example-ytp--${mod.trim()}`).join(' ')
+  +section.example-ytp(class=allMods)&attributes(attributes)
+    +container
+      +title({}, 'caption-medium') Text utp
+      +btn.js-modal(aria-label="Открыть pop-up", aria-expanded="false", data-id="pop-up") Open pop-up button

@@ -1,0 +1,20 @@
+extends ../pug/layout
+
+block vars
+  - page = 'home';
+
+block head
+  - pageTitle = 'Пример';
+
+block content
+  +content-wrapper
+    +menu-drop
+    +slider-banner
+    +example-grid
+    +example-preview
+    +example-ytp
+
+block modals
+
+block scripts
+  - jsName = '';

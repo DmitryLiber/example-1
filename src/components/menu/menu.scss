@@ -1,0 +1,43 @@
+@layer component {
+  .menu {
+    &__list {
+      @include reset-list;
+
+      display: flex;
+      gap: 30px;
+
+      @include mq($ms) {
+        gap: 60px;
+      }
+    }
+
+    &__link {
+      @include font(18px, 1.61, 700);
+
+      @include mq($ms) {
+        font-size: 28px;
+      }
+
+      display: block;
+    }
+  }
+}
+
+@layer mod {
+  .menu--alt {
+    .menu {
+      &__list {
+        gap: 175px;
+      }
+    }
+  }
+
+  .menu--vertical {
+    .menu {
+      &__list {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+}

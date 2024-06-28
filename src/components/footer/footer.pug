@@ -1,0 +1,6 @@
+
+mixin footer(mods)
+  - const allMods = mods && mods.split(',').map((mod) => `footer--${mod.trim()}`).join(' ')
+  footer.footer(class=allMods)&attributes(attributes)
+    +container
+      +menu({}, 'alt')

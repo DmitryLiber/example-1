@@ -1,0 +1,17 @@
+@layer component {
+  .container {
+    --pad: 8px;
+    --pad-neg: -8px;
+
+    width: 100%;
+    max-width: $max-width;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 var(--pad);
+
+    @include mq($m) {
+      --pad: 25px;
+      --pad-neg: -25px;
+    }
+  }
+}

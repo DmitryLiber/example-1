@@ -1,0 +1,34 @@
+.slider-banner {
+  padding: 25px 0;
+  background-color: cl(surface-second);
+
+  @include mq($ms) {
+    padding: 49px 0 52px;
+  }
+
+  .container {
+    @include mq($ms) {
+      --pad: 50px;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    min-height: 77px;
+    padding: 0 50px;
+
+    @include mq-max($ms) {
+      flex-direction: column;
+    }
+
+    @include mq($ms) {
+      padding: 0 219px;
+    }
+  }
+
+  .btn {
+    flex-shrink: 0;
+  }
+}

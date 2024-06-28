@@ -1,0 +1,46 @@
+.example-grid {
+  .container {
+    --pad: 0;
+  }
+
+  &__items {
+    @include reset-list;
+
+    display: grid;
+    gap: 13px;
+    counter-reset: item;
+
+    @include mq($m) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include mq($ms) {
+      grid-template-columns: minmax(0, 392px) 1fr minmax(0, 162px);
+    }
+  }
+
+  &__item {
+    @include font(53px, normal);
+    @include center;
+
+    min-height: 198px;
+    background-color: cl(alt);
+
+    &::before {
+      content: counter(item);
+      counter-increment: item;
+    }
+
+    &:nth-child(4n + 2) {
+      @include mq($ms) {
+        grid-column: span 2;
+      }
+    }
+
+    &:nth-child(4n + 3) {
+      @include mq($ms) {
+        grid-column: span 2;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@layer component {
+  .example-preview {
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      padding: 15px;
+      background-color: cl(surface-third);
+      border-radius: var(--radius-xm);
+
+      @include mq($m) {
+        gap: 20px;
+        padding: 25px;
+        border-radius: var(--radius-l);
+      }
+    }
+
+    &__item {
+      background-color: cl(surface-forth);
+      border: 2px solid cl(shared);
+      border-radius: var(--radius-s);
+      aspect-ratio: 1;
+
+      @include mq($m) {
+        border-radius: var(--radius-xl);
+      }
+    }
+  }
+}
+
+@layer state {
+  .example-preview {
+    &__item {
+      &.active {
+        box-shadow: 2px 5px 10px 0 cl(surface-forth);
+      }
+    }
+  }
+}

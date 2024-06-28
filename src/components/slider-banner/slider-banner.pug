@@ -1,0 +1,12 @@
+
+mixin slider-banner(mods)
+  - const allMods = mods && mods.split(',').map((mod) => `slider-banner--${mod.trim()}`).join(' ')
+  +section.slider-banner(class=allMods)&attributes(attributes)
+    +container
+      .swiper.slider-banner__slider.js-slider-banner
+        .swiper-wrapper
+          each val in Array(5)
+            .slider-banner__slide.swiper-slide
+              +title({tag: 'h1'}, 'xl') H1  text
+              +btn({}, 'alt').js-modal(aria-label="Открыть pop-up", aria-expanded="false", data-id="pop-up") Open pop-up button
+        +slider-nav({},'full')
